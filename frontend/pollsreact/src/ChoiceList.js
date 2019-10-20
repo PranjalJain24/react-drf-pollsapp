@@ -19,11 +19,9 @@ class ChoiceList extends React.Component {
     console.log("Votes ", val.votes);
     console.log("qs_id ", ques.question);
     console.log("ch_id ", choice_id.id);
-
     
     this.setState({
       choice: event.currentTarget.value ,
-      // voteCount: this.state.voteCount + 1
       voteCount: val.votes,
       quesNo: ques.question,
       ch_id: choice_id.id
@@ -36,7 +34,7 @@ class ChoiceList extends React.Component {
     this.setState({voteCount: this.state.voteCount + 1}, () => {
       console.log("now", this.state.voteCount)
   });
-    console.log("Votes in click", this.state.voteCount);
+    console.log("Votes on click", this.state.voteCount);
     //const incVote= this.state.voteCount +1
     const someData = {
       "choice_text": this.state.choice,
